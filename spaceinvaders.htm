@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html manifest="spaceinvaders.appcache">
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/html5.css" />
+		<script type="text/javascript" src="js/game.js"></script>
+		<script type="text/javascript" src="js/intro.js"></script>
+		<script type="text/javascript" src="js/flicker.js"></script>
+		<script type="text/javascript" src="js/stars.js"></script>
+		<script type="text/javascript" src="js/level.js"></script>
+		<script type="text/javascript" src="js/monsters.js"></script>
+		<script type="text/javascript" src="js/spaceinvaders.js"></script>
+		<script type="text/javascript" src="js/player.js"></script>
+		<script type="text/javascript" src="js/shot.js"></script>
+	</head>
+	<body>
+		<!--<p>Styr med höger och vänster piltangenter. Skjut med space. Skippa intro med esc</p>-->
+		<div class="monitor">
+			<div class="canvasBackground">
+				<canvas id="Canvas1" width="800" height="600"></canvas>
+				<div id="PowerButton"></div>
+				<div id="VolumeUpButton"></div>
+				<div id="VolumeDownButton"></div>
+				<div id="PowerLedBackground"></div>
+			</div>
+		</div>
+		
+		<div class="sounds">
+			<audio controls id="AudioIntro">
+				<source src="music/Polaris.mp3" type="audio/mpeg">
+				Your browser does not support the audio tag.
+			</audio>
+			<audio controls id="AudioIngame">
+				<source src="music/ingame1.mp3" type="audio/mpeg">
+				Your browser does not support the audio tag.
+			</audio>
+		</div>
+	</body>
+</html>
