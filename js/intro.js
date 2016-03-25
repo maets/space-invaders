@@ -1,4 +1,4 @@
-function Intro() {
+ï»¿function Intro() {
 	this._sceneNo = 1;
 	this._dirY = 5;
 	this._frameWidth = 600;
@@ -65,7 +65,7 @@ function Intro() {
 	}
 
 	this.Scene1 = function (ctx) {
-		var text = "Määts presents...";
+		var text = "MÃ¤Ã¤ts presents...";
 		ctx.font = '50px Calibri';	
 
 		// Set shadow
@@ -82,21 +82,21 @@ function Intro() {
 
 		// Set main shadow
 		ctx.fillStyle = 'black';
-		ctx.fillText('SPÄJS INVÄJDÖRS!', (this._framePosX + 112), (this._framePosY + 102));
+		ctx.fillText('SPÃ„JS INVÃ„JDÃ–RS!', (this._framePosX + 112), (this._framePosY + 102));
 
 		// Set main text
 		ctx.fillStyle = 'red';
-		ctx.fillText('SPÄJS INVÄJDÖRS!', (this._framePosX + 110), (this._framePosY + 100));
+		ctx.fillText('SPÃ„JS INVÃ„JDÃ–RS!', (this._framePosX + 110), (this._framePosY + 100));
 
 		ctx.font = '25px Calibri';
 
 		// Set secondary shadow #1
 		ctx.fillStyle = 'black';
-		ctx.fillText('v 0.4.... gött mos i pösen!', (this._framePosX + 111), (this._framePosY + 151));
+		ctx.fillText('v 0.4.... gÃ¶tt mos i pÃ¶sen!', (this._framePosX + 111), (this._framePosY + 151));
 
 		// Set secondary text #1
 		ctx.fillStyle = 'red';
-		ctx.fillText('v 0.4.... gött mos i pösen!', (this._framePosX + 110), (this._framePosY + 150));
+		ctx.fillText('v 0.4.... gÃ¶tt mos i pÃ¶sen!', (this._framePosX + 110), (this._framePosY + 150));
 
 		// Set secondary shadow #2
 		ctx.fillStyle = 'black';

@@ -1,4 +1,4 @@
-/* TODO list:
+ï»¿/* TODO list:
 1. Create some handler for timed scenes.
 2. Create a generic class/function for framed messages that maintains the current background (through temp copy?) and centers the text.
 
@@ -101,9 +101,9 @@ function Game() {
 	}
 	
 	this.LoadContent = function () {
-		// load content – graphics, sound etc.
+		// load content â€“ graphics, sound etc.
 		// since all content is loaded run main game loop
-		// Calls RunGameLoop method every ‘draw interval’
+		// Calls RunGameLoop method every â€˜draw intervalâ€™
 		var _this = this;
 		
 		this._flicker = new Flicker();

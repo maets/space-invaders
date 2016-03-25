@@ -1,4 +1,4 @@
-
+﻿
 var _game,
 	animFrame = window.requestAnimationFrame ||
 				window.webkitRequestAnimationFrame ||

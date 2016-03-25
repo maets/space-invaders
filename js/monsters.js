@@ -1,4 +1,4 @@
-function Monster() {
+﻿function Monster() {
 	this._speed;
 	this._color;
 	this._borderColor;

@@ -1,4 +1,4 @@
-function Level() {
+﻿function Level() {
 	this._monsters;
 	this._name;
 	

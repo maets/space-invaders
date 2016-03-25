@@ -1,4 +1,4 @@
-function Flicker() {
+﻿function Flicker() {
 		
 	this._flickerColors = [];
 	this._flickerGradients = [];

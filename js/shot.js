@@ -1,4 +1,4 @@
-function Shot() {
+﻿function Shot() {
 	this._height = 3;
 	this._width = 1;
 	this._dirX = 0;

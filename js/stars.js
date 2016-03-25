@@ -1,4 +1,4 @@
-function Stars() {
+﻿function Stars() {
 	
 	this._staticStars = [];
 	this._backGroundColor = "black";

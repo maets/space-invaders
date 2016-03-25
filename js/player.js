@@ -1,4 +1,4 @@
-function Player() {
+﻿function Player() {
 	this._height;
 	this._width;
 	this._dirX = 0;
