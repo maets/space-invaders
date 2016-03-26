@@ -1,4 +1,4 @@
-﻿function Player() {
+function Player() {
 	this._height;
 	this._width;
 	this._dirX = 0;
@@ -15,16 +15,20 @@
 		this._width = width;
 		this._height = height;
 	}
-	
+    
+    // Set the spacefigure's direction (-1: left, 0: still, 1: right)
 	this.SetDirection = function (dir) {
 		this._dirX = dir;
 		this._dirSet = true;
 	}
 	
+    // Update the spacefigure's position
 	this.Update = function (maxX, maxY) {
-		if (((this._posX + this._dirX + this._width) > maxX) || (this._posX + this._dirX - this._width) < 0) {
-			// Do nothing... reached border
-		} else {
+		if (this._dirX == 1 && (this._posX + this._dirX + (this._width / 2)) > maxX) {
+			// Do nothing... moving right & reached right border
+		} else if (this._dirX == -1 && (this._posX + this._dirX + (this._width / 2)) < 0) {
+            // Do nothing... moving left & reached left border
+        } else {
 			this._posX = this._posX + (this._dirX * this._speed);
 			
 			// Reset movement

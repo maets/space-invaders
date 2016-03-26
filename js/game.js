@@ -307,20 +307,26 @@ function Game() {
 		switch (evt.keyCode) {
 			case 37:  /* Left arrow was pressed */
 				this._player.SetDirection(-1);
-				break;
+				console.log("Left arrow pressed");
+                evt.preventDefault();
+                break;
 			case 39:  /* Right arrow was pressed */
 				this._player.SetDirection(1);
+                console.log("Right arrow pressed");
+                evt.preventDefault();
 				break;
 			case 32: /* Space bar */
 				var shot = new Shot();
 				shot.Init((this._player._posX + (this._player._width / 2)) , this._player._posY);
 				this._shots.push(shot);
 				this.PlaySound('shot');
+                evt.preventDefault();
 				break;
 			case 27: /* Escape */
 				if (!!this._intro && !this._intro._introFinished) { /* Skip intro */
 					this._intro.EndIntro();
 				}
+                evt.preventDefault();
 				break;
 		}
 	}
@@ -363,7 +369,7 @@ function Game() {
 		}
 	
 		//Update player
-		this._player.Update();
+		this._player.Update(this._canvas.width, this._canvas.height);
 	}
 
 	this.Draw = function () {
