@@ -1,4 +1,4 @@
-﻿/* TODO list:
+/* TODO list:
 1. Create some handler for timed scenes.
 2. Create a generic class/function for framed messages that maintains the current background (through temp copy?) and centers the text.
 
@@ -264,6 +264,7 @@ function Game() {
 			this._pauseUntil = 0;
 			this._win = false;	
 			this._levelIndex = this._levelIndex + 1;
+            this._levelIntro = true;
 		}
 	}
 	
