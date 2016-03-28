@@ -307,12 +307,10 @@ function Game() {
 		switch (evt.keyCode) {
 			case 37:  /* Left arrow was pressed */
 				this._player.SetDirection(-1);
-				console.log("Left arrow pressed");
                 evt.preventDefault();
                 break;
 			case 39:  /* Right arrow was pressed */
 				this._player.SetDirection(1);
-                console.log("Right arrow pressed");
                 evt.preventDefault();
 				break;
 			case 32: /* Space bar */
