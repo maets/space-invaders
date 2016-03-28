@@ -118,10 +118,10 @@ function Game() {
 		// Create some levels
 		this._levels = [];
 		var levelMap = [
-				{ name: "Bengt Alsterlind evil tjipp clan", amount: 5, speed: 1, color: "Red", borderColor: "White", height: 30, width: 30 },
-				{ name: "Zombie creatures from Mars", amount: 7, speed: 1, color: "Green", borderColor: "White", height: 30, width: 30 },
-				{ name: "Moon weed farmer labor", amount: 10, speed: 2, color: "Blue", borderColor: "White", height: 20, width: 20 },
-				{ name: "ET & CO", amount: 12, speed: 2, color: "Lime", borderColor: "White", height: 50, width: 50 },
+				//{ name: "Bengt Alsterlind evil tjipp clan", amount: 5, speed: 1, color: "Red", borderColor: "White", height: 30, width: 30 },
+				//{ name: "Zombie creatures from Mars", amount: 7, speed: 1, color: "Green", borderColor: "White", height: 30, width: 30 },
+				//{ name: "Moon weed farmer labor", amount: 10, speed: 2, color: "Blue", borderColor: "White", height: 20, width: 20 },
+				{ name: "ET & CO", amount: 1 /*12*/, speed: 2, color: "Lime", borderColor: "White", height: 50, width: 50 },
 				{ name: "Bengt Alsterlind himself", amount: 1, speed: 3, color: "Black", borderColor: "White", height: 40, width: 30 }
 			],
 			level = null,
@@ -307,12 +307,10 @@ function Game() {
 		switch (evt.keyCode) {
 			case 37:  /* Left arrow was pressed */
 				this._player.SetDirection(-1);
-				console.log("Left arrow pressed");
                 evt.preventDefault();
                 break;
 			case 39:  /* Right arrow was pressed */
 				this._player.SetDirection(1);
-                console.log("Right arrow pressed");
                 evt.preventDefault();
 				break;
 			case 32: /* Space bar */
