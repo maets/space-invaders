@@ -1,4 +1,4 @@
-﻿/* TODO list:
+/* TODO list:
 1. Create some handler for timed scenes.
 2. Create a generic class/function for framed messages that maintains the current background (through temp copy?) and centers the text.
 
@@ -65,9 +65,12 @@ function Game() {
 		this._firstLevelIntroCall = true;
 		
 		// Turn off & remove music loop
-		this._music.stop();
-		this._music.removeEventListener('ended', this.PlayMusic);
-		
+		if (!this._intro._introFinished) {
+			this._intro.EndIntro();
+		} else {
+            this._music.stop();
+            this._music.removeEventListener('ended', this.PlayMusic);
+		}
 		// Set black background
 		this._canvasContext.fillStyle = "#000000";
 		this._canvasContext.beginPath();
@@ -264,6 +267,7 @@ function Game() {
 			this._pauseUntil = 0;
 			this._win = false;	
 			this._levelIndex = this._levelIndex + 1;
+            this._levelIntro = true;
 		}
 	}
 	
@@ -306,20 +310,24 @@ function Game() {
 		switch (evt.keyCode) {
 			case 37:  /* Left arrow was pressed */
 				this._player.SetDirection(-1);
-				break;
+                evt.preventDefault();
+                break;
 			case 39:  /* Right arrow was pressed */
 				this._player.SetDirection(1);
+                evt.preventDefault();
 				break;
 			case 32: /* Space bar */
 				var shot = new Shot();
 				shot.Init((this._player._posX + (this._player._width / 2)) , this._player._posY);
 				this._shots.push(shot);
 				this.PlaySound('shot');
+                evt.preventDefault();
 				break;
 			case 27: /* Escape */
 				if (!!this._intro && !this._intro._introFinished) { /* Skip intro */
 					this._intro.EndIntro();
 				}
+                evt.preventDefault();
 				break;
 		}
 	}
@@ -362,7 +370,7 @@ function Game() {
 		}
 	
 		//Update player
-		this._player.Update();
+		this._player.Update(this._canvas.width, this._canvas.height);
 	}
 
 	this.Draw = function () {

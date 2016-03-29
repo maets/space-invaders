@@ -1,4 +1,4 @@
-﻿function Intro() {
+function Intro() {
 	this._sceneNo = 1;
 	this._dirY = 5;
 	this._frameWidth = 600;
@@ -78,6 +78,10 @@
 	}
 
 	this.Scene2 = function (ctx) {
+        this._frameWidth = 600;
+        this._frameHeight = 400;
+        
+        
 		ctx.font = '50px Calibri';
 
 		// Set main shadow
@@ -92,19 +96,37 @@
 
 		// Set secondary shadow #1
 		ctx.fillStyle = 'black';
-		ctx.fillText('v 0.4.... gött mos i pösen!', (this._framePosX + 111), (this._framePosY + 151));
+		ctx.fillText('v 0.5. Saucy sausage', (this._framePosX + 111), (this._framePosY + 151));
 
 		// Set secondary text #1
 		ctx.fillStyle = 'red';
-		ctx.fillText('v 0.4.... gött mos i pösen!', (this._framePosX + 110), (this._framePosY + 150));
+		ctx.fillText('v 0.5.... Saucy sausage', (this._framePosX + 110), (this._framePosY + 150));
 
 		// Set secondary shadow #2
 		ctx.fillStyle = 'black';
-		ctx.fillText('(in english: nice mash in the bag!)', (this._framePosX + 111), (this._framePosY + 176));
+		ctx.fillText('(no strange things)', (this._framePosX + 111), (this._framePosY + 176));
 
 		// Set secondary text #2
 		ctx.fillStyle = 'red';
-		ctx.fillText('(in english: nice mash in the bag!)', (this._framePosX + 110), (this._framePosY + 175));
+		ctx.fillText('(no strange things)', (this._framePosX + 110), (this._framePosY + 175));
+        
+        ctx.font = '25px Calibri';
+        
+		// Set credits shadow #1
+		ctx.fillStyle = 'black';
+		ctx.fillText('Music & FX: Årling', (this._framePosX + 111), (this._framePosY + 226));
+
+        // Set credits text #1
+		ctx.fillStyle = 'red';
+		ctx.fillText('Music & FX: Årling', (this._framePosX + 110), (this._framePosY + 225));
+        
+        // Set credits shadow #2
+		ctx.fillStyle = 'black';
+		ctx.fillText('https://soundcloud.com/aarling', (this._framePosX + 111), (this._framePosY + 251));
+
+        // Set credits text #2
+		ctx.fillStyle = 'red';
+		ctx.fillText('https://soundcloud.com/aarling', (this._framePosX + 110), (this._framePosY + 250));
 	}
 
 	this.Draw = function (ctx) {
