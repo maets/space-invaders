@@ -100,7 +100,7 @@ function Intro() {
 
 		// Set secondary text #1
 		ctx.fillStyle = 'red';
-		ctx.fillText('v 0.5.... Saucy sausage', (this._framePosX + 110), (this._framePosY + 150));
+		ctx.fillText('v 0.5. Saucy sausage', (this._framePosX + 110), (this._framePosY + 150));
 
 		// Set secondary shadow #2
 		ctx.fillStyle = 'black';
