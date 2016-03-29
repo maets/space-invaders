@@ -65,9 +65,12 @@ function Game() {
 		this._firstLevelIntroCall = true;
 		
 		// Turn off & remove music loop
-		this._music.stop();
-		this._music.removeEventListener('ended', this.PlayMusic);
-		
+		if (!this._intro._introFinished) {
+			this._intro.EndIntro();
+		} else {
+            this._music.stop();
+            this._music.removeEventListener('ended', this.PlayMusic);
+		}
 		// Set black background
 		this._canvasContext.fillStyle = "#000000";
 		this._canvasContext.beginPath();
